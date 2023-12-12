@@ -4,7 +4,7 @@ class scoreBoard(Turtle):
 
     def get_high_score(self):
             try:
-                with open("day21/high_score.txt", "r") as file:
+                with open("high_score.txt", "r") as file:
                     return int(file.read())
             except FileNotFoundError:
                 return 0
@@ -22,7 +22,7 @@ class scoreBoard(Turtle):
         self.location = (0, 260)
 
     def update_high_score(self):
-        with open("day21/high_score.txt", "w") as file:
+        with open("high_score.txt", "w") as file:
             file.write(str(self.high_score))
         self.update_scoreboard()
     
